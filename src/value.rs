@@ -105,6 +105,209 @@ pub enum ValueTuple {
     One(Value),
     Two(Value, Value),
     Three(Value, Value, Value),
+    Four(Value, Value, Value, Value),
+    Five(Value, Value, Value, Value, Value),
+    Six(Value, Value, Value, Value, Value, Value),
+    Seven(Value, Value, Value, Value, Value, Value, Value),
+    Eight(Value, Value, Value, Value, Value, Value, Value, Value),
+    Nine(
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+    ),
+    Ten(
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+    ),
+    Eleven(
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+    ),
+    Twelve(
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+    ),
+    Thirteen(
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+    ),
+    Fourteen(
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+    ),
+    Fifteen(
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+    ),
+    Sixteen(
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+    ),
+    Seventeen(
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+    ),
+    Eighteen(
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+    ),
+    Nineteen(
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+    ),
+    Twenty(
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+        Value,
+    ),
 }
 
 pub trait IntoValueTuple {
@@ -537,9 +740,50 @@ impl IntoIterator for ValueTuple {
 
     fn into_iter(self) -> Self::IntoIter {
         match self {
-            ValueTuple::One(v) => vec![v].into_iter(),
-            ValueTuple::Two(v, w) => vec![v, w].into_iter(),
-            ValueTuple::Three(u, v, w) => vec![u, v, w].into_iter(),
+            ValueTuple::One(a) => vec![a].into_iter(),
+            ValueTuple::Two(a, b) => vec![a, b].into_iter(),
+            ValueTuple::Three(a, b, c) => vec![a, b, c].into_iter(),
+            ValueTuple::Four(a, b, c, d) => vec![a, b, c, d].into_iter(),
+            ValueTuple::Five(a, b, c, d, e) => vec![a, b, c, d, e].into_iter(),
+            ValueTuple::Six(a, b, c, d, e, f) => vec![a, b, c, d, e, f].into_iter(),
+            ValueTuple::Seven(a, b, c, d, e, f, g) => vec![a, b, c, d, e, f, g].into_iter(),
+            ValueTuple::Eight(a, b, c, d, e, f, g, h) => vec![a, b, c, d, e, f, g, h].into_iter(),
+            ValueTuple::Nine(a, b, c, d, e, f, g, h, i) => {
+                vec![a, b, c, d, e, f, g, h, i].into_iter()
+            }
+            ValueTuple::Ten(a, b, c, d, e, f, g, h, i, j) => {
+                vec![a, b, c, d, e, f, g, h, i, j].into_iter()
+            }
+            ValueTuple::Eleven(a, b, c, d, e, f, g, h, i, j, k) => {
+                vec![a, b, c, d, e, f, g, h, i, j, k].into_iter()
+            }
+            ValueTuple::Twelve(a, b, c, d, e, f, g, h, i, j, k, l) => {
+                vec![a, b, c, d, e, f, g, h, i, j, k, l].into_iter()
+            }
+            ValueTuple::Thirteen(a, b, c, d, e, f, g, h, i, j, k, l, m) => {
+                vec![a, b, c, d, e, f, g, h, i, j, k, l, m].into_iter()
+            }
+            ValueTuple::Fourteen(a, b, c, d, e, f, g, h, i, j, k, l, m, n) => {
+                vec![a, b, c, d, e, f, g, h, i, j, k, l, m, n].into_iter()
+            }
+            ValueTuple::Fifteen(a, b, c, d, e, f, g, h, i, j, k, l, m, n, o) => {
+                vec![a, b, c, d, e, f, g, h, i, j, k, l, m, n, o].into_iter()
+            }
+            ValueTuple::Sixteen(a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p) => {
+                vec![a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p].into_iter()
+            }
+            ValueTuple::Seventeen(a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q) => {
+                vec![a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q].into_iter()
+            }
+            ValueTuple::Eighteen(a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r) => {
+                vec![a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r].into_iter()
+            }
+            ValueTuple::Nineteen(a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s) => {
+                vec![a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s].into_iter()
+            }
+            ValueTuple::Twenty(a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t) => {
+                vec![a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t].into_iter()
+            }
         }
     }
 }
@@ -550,43 +794,589 @@ impl IntoValueTuple for ValueTuple {
     }
 }
 
-impl<V> IntoValueTuple for V
+impl<A> IntoValueTuple for A
 where
-    V: Into<Value>,
+    A: Into<Value>,
 {
     fn into_value_tuple(self) -> ValueTuple {
         ValueTuple::One(self.into())
     }
 }
 
-impl<V, W> IntoValueTuple for (V, W)
+impl<A, B> IntoValueTuple for (A, B)
 where
-    V: Into<Value>,
-    W: Into<Value>,
+    A: Into<Value>,
+    B: Into<Value>,
 {
     fn into_value_tuple(self) -> ValueTuple {
         ValueTuple::Two(self.0.into(), self.1.into())
     }
 }
-
-impl<U, V, W> IntoValueTuple for (U, V, W)
+impl<A, B, C> IntoValueTuple for (A, B, C)
 where
-    U: Into<Value>,
-    V: Into<Value>,
-    W: Into<Value>,
+    A: Into<Value>,
+    B: Into<Value>,
+    C: Into<Value>,
 {
     fn into_value_tuple(self) -> ValueTuple {
         ValueTuple::Three(self.0.into(), self.1.into(), self.2.into())
     }
 }
-
-impl<V> FromValueTuple for V
+impl<A, B, C, D> IntoValueTuple for (A, B, C, D)
 where
-    V: Into<Value> + ValueType,
+    A: Into<Value>,
+    B: Into<Value>,
+    C: Into<Value>,
+    D: Into<Value>,
 {
-    fn from_value_tuple<I>(i: I) -> Self
+    fn into_value_tuple(self) -> ValueTuple {
+        ValueTuple::Four(self.0.into(), self.1.into(), self.2.into(), self.3.into())
+    }
+}
+impl<A, B, C, D, E> IntoValueTuple for (A, B, C, D, E)
+where
+    A: Into<Value>,
+    B: Into<Value>,
+    C: Into<Value>,
+    D: Into<Value>,
+    E: Into<Value>,
+{
+    fn into_value_tuple(self) -> ValueTuple {
+        ValueTuple::Five(
+            self.0.into(),
+            self.1.into(),
+            self.2.into(),
+            self.3.into(),
+            self.4.into(),
+        )
+    }
+}
+impl<A, B, C, D, E, F> IntoValueTuple for (A, B, C, D, E, F)
+where
+    A: Into<Value>,
+    B: Into<Value>,
+    C: Into<Value>,
+    D: Into<Value>,
+    E: Into<Value>,
+    F: Into<Value>,
+{
+    fn into_value_tuple(self) -> ValueTuple {
+        ValueTuple::Six(
+            self.0.into(),
+            self.1.into(),
+            self.2.into(),
+            self.3.into(),
+            self.4.into(),
+            self.5.into(),
+        )
+    }
+}
+impl<A, B, C, D, E, F, G> IntoValueTuple for (A, B, C, D, E, F, G)
+where
+    A: Into<Value>,
+    B: Into<Value>,
+    C: Into<Value>,
+    D: Into<Value>,
+    E: Into<Value>,
+    F: Into<Value>,
+    G: Into<Value>,
+{
+    fn into_value_tuple(self) -> ValueTuple {
+        ValueTuple::Seven(
+            self.0.into(),
+            self.1.into(),
+            self.2.into(),
+            self.3.into(),
+            self.4.into(),
+            self.5.into(),
+            self.6.into(),
+        )
+    }
+}
+impl<A, B, C, D, E, F, G, H> IntoValueTuple for (A, B, C, D, E, F, G, H)
+where
+    A: Into<Value>,
+    B: Into<Value>,
+    C: Into<Value>,
+    D: Into<Value>,
+    E: Into<Value>,
+    F: Into<Value>,
+    G: Into<Value>,
+    H: Into<Value>,
+{
+    fn into_value_tuple(self) -> ValueTuple {
+        ValueTuple::Eight(
+            self.0.into(),
+            self.1.into(),
+            self.2.into(),
+            self.3.into(),
+            self.4.into(),
+            self.5.into(),
+            self.6.into(),
+            self.7.into(),
+        )
+    }
+}
+impl<A, B, C, D, E, F, G, H, I> IntoValueTuple for (A, B, C, D, E, F, G, H, I)
+where
+    A: Into<Value>,
+    B: Into<Value>,
+    C: Into<Value>,
+    D: Into<Value>,
+    E: Into<Value>,
+    F: Into<Value>,
+    G: Into<Value>,
+    H: Into<Value>,
+    I: Into<Value>,
+{
+    fn into_value_tuple(self) -> ValueTuple {
+        ValueTuple::Nine(
+            self.0.into(),
+            self.1.into(),
+            self.2.into(),
+            self.3.into(),
+            self.4.into(),
+            self.5.into(),
+            self.6.into(),
+            self.7.into(),
+            self.8.into(),
+        )
+    }
+}
+impl<A, B, C, D, E, F, G, H, I, J> IntoValueTuple for (A, B, C, D, E, F, G, H, I, J)
+where
+    A: Into<Value>,
+    B: Into<Value>,
+    C: Into<Value>,
+    D: Into<Value>,
+    E: Into<Value>,
+    F: Into<Value>,
+    G: Into<Value>,
+    H: Into<Value>,
+    I: Into<Value>,
+    J: Into<Value>,
+{
+    fn into_value_tuple(self) -> ValueTuple {
+        ValueTuple::Ten(
+            self.0.into(),
+            self.1.into(),
+            self.2.into(),
+            self.3.into(),
+            self.4.into(),
+            self.5.into(),
+            self.6.into(),
+            self.7.into(),
+            self.8.into(),
+            self.9.into(),
+        )
+    }
+}
+impl<A, B, C, D, E, F, G, H, I, J, K> IntoValueTuple for (A, B, C, D, E, F, G, H, I, J, K)
+where
+    A: Into<Value>,
+    B: Into<Value>,
+    C: Into<Value>,
+    D: Into<Value>,
+    E: Into<Value>,
+    F: Into<Value>,
+    G: Into<Value>,
+    H: Into<Value>,
+    I: Into<Value>,
+    J: Into<Value>,
+    K: Into<Value>,
+{
+    fn into_value_tuple(self) -> ValueTuple {
+        ValueTuple::Eleven(
+            self.0.into(),
+            self.1.into(),
+            self.2.into(),
+            self.3.into(),
+            self.4.into(),
+            self.5.into(),
+            self.6.into(),
+            self.7.into(),
+            self.8.into(),
+            self.9.into(),
+            self.10.into(),
+        )
+    }
+}
+impl<A, B, C, D, E, F, G, H, I, J, K, L> IntoValueTuple for (A, B, C, D, E, F, G, H, I, J, K, L)
+where
+    A: Into<Value>,
+    B: Into<Value>,
+    C: Into<Value>,
+    D: Into<Value>,
+    E: Into<Value>,
+    F: Into<Value>,
+    G: Into<Value>,
+    H: Into<Value>,
+    I: Into<Value>,
+    J: Into<Value>,
+    K: Into<Value>,
+    L: Into<Value>,
+{
+    fn into_value_tuple(self) -> ValueTuple {
+        ValueTuple::Twelve(
+            self.0.into(),
+            self.1.into(),
+            self.2.into(),
+            self.3.into(),
+            self.4.into(),
+            self.5.into(),
+            self.6.into(),
+            self.7.into(),
+            self.8.into(),
+            self.9.into(),
+            self.10.into(),
+            self.11.into(),
+        )
+    }
+}
+impl<A, B, C, D, E, F, G, H, I, J, K, L, M> IntoValueTuple
+    for (A, B, C, D, E, F, G, H, I, J, K, L, M)
+where
+    A: Into<Value>,
+    B: Into<Value>,
+    C: Into<Value>,
+    D: Into<Value>,
+    E: Into<Value>,
+    F: Into<Value>,
+    G: Into<Value>,
+    H: Into<Value>,
+    I: Into<Value>,
+    J: Into<Value>,
+    K: Into<Value>,
+    L: Into<Value>,
+    M: Into<Value>,
+{
+    fn into_value_tuple(self) -> ValueTuple {
+        ValueTuple::Thirteen(
+            self.0.into(),
+            self.1.into(),
+            self.2.into(),
+            self.3.into(),
+            self.4.into(),
+            self.5.into(),
+            self.6.into(),
+            self.7.into(),
+            self.8.into(),
+            self.9.into(),
+            self.10.into(),
+            self.11.into(),
+            self.12.into(),
+        )
+    }
+}
+impl<A, B, C, D, E, F, G, H, I, J, K, L, M, N> IntoValueTuple
+    for (A, B, C, D, E, F, G, H, I, J, K, L, M, N)
+where
+    A: Into<Value>,
+    B: Into<Value>,
+    C: Into<Value>,
+    D: Into<Value>,
+    E: Into<Value>,
+    F: Into<Value>,
+    G: Into<Value>,
+    H: Into<Value>,
+    I: Into<Value>,
+    J: Into<Value>,
+    K: Into<Value>,
+    L: Into<Value>,
+    M: Into<Value>,
+    N: Into<Value>,
+{
+    fn into_value_tuple(self) -> ValueTuple {
+        ValueTuple::Fourteen(
+            self.0.into(),
+            self.1.into(),
+            self.2.into(),
+            self.3.into(),
+            self.4.into(),
+            self.5.into(),
+            self.6.into(),
+            self.7.into(),
+            self.8.into(),
+            self.9.into(),
+            self.10.into(),
+            self.11.into(),
+            self.12.into(),
+            self.13.into(),
+        )
+    }
+}
+impl<A, B, C, D, E, F, G, H, I, J, K, L, M, N, O> IntoValueTuple
+    for (A, B, C, D, E, F, G, H, I, J, K, L, M, N, O)
+where
+    A: Into<Value>,
+    B: Into<Value>,
+    C: Into<Value>,
+    D: Into<Value>,
+    E: Into<Value>,
+    F: Into<Value>,
+    G: Into<Value>,
+    H: Into<Value>,
+    I: Into<Value>,
+    J: Into<Value>,
+    K: Into<Value>,
+    L: Into<Value>,
+    M: Into<Value>,
+    N: Into<Value>,
+    O: Into<Value>,
+{
+    fn into_value_tuple(self) -> ValueTuple {
+        ValueTuple::Fifteen(
+            self.0.into(),
+            self.1.into(),
+            self.2.into(),
+            self.3.into(),
+            self.4.into(),
+            self.5.into(),
+            self.6.into(),
+            self.7.into(),
+            self.8.into(),
+            self.9.into(),
+            self.10.into(),
+            self.11.into(),
+            self.12.into(),
+            self.13.into(),
+            self.14.into(),
+        )
+    }
+}
+impl<A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P> IntoValueTuple
+    for (A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P)
+where
+    A: Into<Value>,
+    B: Into<Value>,
+    C: Into<Value>,
+    D: Into<Value>,
+    E: Into<Value>,
+    F: Into<Value>,
+    G: Into<Value>,
+    H: Into<Value>,
+    I: Into<Value>,
+    J: Into<Value>,
+    K: Into<Value>,
+    L: Into<Value>,
+    M: Into<Value>,
+    N: Into<Value>,
+    O: Into<Value>,
+    P: Into<Value>,
+{
+    fn into_value_tuple(self) -> ValueTuple {
+        ValueTuple::Sixteen(
+            self.0.into(),
+            self.1.into(),
+            self.2.into(),
+            self.3.into(),
+            self.4.into(),
+            self.5.into(),
+            self.6.into(),
+            self.7.into(),
+            self.8.into(),
+            self.9.into(),
+            self.10.into(),
+            self.11.into(),
+            self.12.into(),
+            self.13.into(),
+            self.14.into(),
+            self.15.into(),
+        )
+    }
+}
+impl<A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q> IntoValueTuple
+    for (A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q)
+where
+    A: Into<Value>,
+    B: Into<Value>,
+    C: Into<Value>,
+    D: Into<Value>,
+    E: Into<Value>,
+    F: Into<Value>,
+    G: Into<Value>,
+    H: Into<Value>,
+    I: Into<Value>,
+    J: Into<Value>,
+    K: Into<Value>,
+    L: Into<Value>,
+    M: Into<Value>,
+    N: Into<Value>,
+    O: Into<Value>,
+    P: Into<Value>,
+    Q: Into<Value>,
+{
+    fn into_value_tuple(self) -> ValueTuple {
+        ValueTuple::Seventeen(
+            self.0.into(),
+            self.1.into(),
+            self.2.into(),
+            self.3.into(),
+            self.4.into(),
+            self.5.into(),
+            self.6.into(),
+            self.7.into(),
+            self.8.into(),
+            self.9.into(),
+            self.10.into(),
+            self.11.into(),
+            self.12.into(),
+            self.13.into(),
+            self.14.into(),
+            self.15.into(),
+            self.16.into(),
+        )
+    }
+}
+impl<A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R> IntoValueTuple
+    for (A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R)
+where
+    A: Into<Value>,
+    B: Into<Value>,
+    C: Into<Value>,
+    D: Into<Value>,
+    E: Into<Value>,
+    F: Into<Value>,
+    G: Into<Value>,
+    H: Into<Value>,
+    I: Into<Value>,
+    J: Into<Value>,
+    K: Into<Value>,
+    L: Into<Value>,
+    M: Into<Value>,
+    N: Into<Value>,
+    O: Into<Value>,
+    P: Into<Value>,
+    Q: Into<Value>,
+    R: Into<Value>,
+{
+    fn into_value_tuple(self) -> ValueTuple {
+        ValueTuple::Eighteen(
+            self.0.into(),
+            self.1.into(),
+            self.2.into(),
+            self.3.into(),
+            self.4.into(),
+            self.5.into(),
+            self.6.into(),
+            self.7.into(),
+            self.8.into(),
+            self.9.into(),
+            self.10.into(),
+            self.11.into(),
+            self.12.into(),
+            self.13.into(),
+            self.14.into(),
+            self.15.into(),
+            self.16.into(),
+            self.17.into(),
+        )
+    }
+}
+impl<A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S> IntoValueTuple
+    for (A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S)
+where
+    A: Into<Value>,
+    B: Into<Value>,
+    C: Into<Value>,
+    D: Into<Value>,
+    E: Into<Value>,
+    F: Into<Value>,
+    G: Into<Value>,
+    H: Into<Value>,
+    I: Into<Value>,
+    J: Into<Value>,
+    K: Into<Value>,
+    L: Into<Value>,
+    M: Into<Value>,
+    N: Into<Value>,
+    O: Into<Value>,
+    P: Into<Value>,
+    Q: Into<Value>,
+    R: Into<Value>,
+    S: Into<Value>,
+{
+    fn into_value_tuple(self) -> ValueTuple {
+        ValueTuple::Nineteen(
+            self.0.into(),
+            self.1.into(),
+            self.2.into(),
+            self.3.into(),
+            self.4.into(),
+            self.5.into(),
+            self.6.into(),
+            self.7.into(),
+            self.8.into(),
+            self.9.into(),
+            self.10.into(),
+            self.11.into(),
+            self.12.into(),
+            self.13.into(),
+            self.14.into(),
+            self.15.into(),
+            self.16.into(),
+            self.17.into(),
+            self.18.into(),
+        )
+    }
+}
+impl<A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T> IntoValueTuple
+    for (A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T)
+where
+    A: Into<Value>,
+    B: Into<Value>,
+    C: Into<Value>,
+    D: Into<Value>,
+    E: Into<Value>,
+    F: Into<Value>,
+    G: Into<Value>,
+    H: Into<Value>,
+    I: Into<Value>,
+    J: Into<Value>,
+    K: Into<Value>,
+    L: Into<Value>,
+    M: Into<Value>,
+    N: Into<Value>,
+    O: Into<Value>,
+    P: Into<Value>,
+    Q: Into<Value>,
+    R: Into<Value>,
+    S: Into<Value>,
+    T: Into<Value>,
+{
+    fn into_value_tuple(self) -> ValueTuple {
+        ValueTuple::Twenty(
+            self.0.into(),
+            self.1.into(),
+            self.2.into(),
+            self.3.into(),
+            self.4.into(),
+            self.5.into(),
+            self.6.into(),
+            self.7.into(),
+            self.8.into(),
+            self.9.into(),
+            self.10.into(),
+            self.11.into(),
+            self.12.into(),
+            self.13.into(),
+            self.14.into(),
+            self.15.into(),
+            self.16.into(),
+            self.17.into(),
+            self.18.into(),
+            self.19.into(),
+        )
+    }
+}
+
+impl<A> FromValueTuple for A
+where
+    A: Into<Value> + ValueType,
+{
+    fn from_value_tuple<Z>(i: Z) -> Self
     where
-        I: IntoValueTuple,
+        Z: IntoValueTuple,
     {
         match i.into_value_tuple() {
             ValueTuple::One(u) => u.unwrap(),
@@ -595,35 +1385,679 @@ where
     }
 }
 
-impl<V, W> FromValueTuple for (V, W)
+impl<A, B> FromValueTuple for (A, B)
 where
-    V: Into<Value> + ValueType,
-    W: Into<Value> + ValueType,
+    A: Into<Value> + ValueType,
+    B: Into<Value> + ValueType,
 {
-    fn from_value_tuple<I>(i: I) -> Self
+    fn from_value_tuple<Z>(i: Z) -> Self
     where
-        I: IntoValueTuple,
+        Z: IntoValueTuple,
     {
         match i.into_value_tuple() {
-            ValueTuple::Two(v, w) => (v.unwrap(), w.unwrap()),
+            ValueTuple::Two(a, b) => (a.unwrap(), b.unwrap()),
             _ => panic!("not ValueTuple::Two"),
         }
     }
 }
-
-impl<U, V, W> FromValueTuple for (U, V, W)
+impl<A, B, C> FromValueTuple for (A, B, C)
 where
-    U: Into<Value> + ValueType,
-    V: Into<Value> + ValueType,
-    W: Into<Value> + ValueType,
+    A: Into<Value> + ValueType,
+    B: Into<Value> + ValueType,
+    C: Into<Value> + ValueType,
 {
-    fn from_value_tuple<I>(i: I) -> Self
+    fn from_value_tuple<Z>(i: Z) -> Self
     where
-        I: IntoValueTuple,
+        Z: IntoValueTuple,
     {
         match i.into_value_tuple() {
-            ValueTuple::Three(u, v, w) => (u.unwrap(), v.unwrap(), w.unwrap()),
+            ValueTuple::Three(a, b, c) => (a.unwrap(), b.unwrap(), c.unwrap()),
             _ => panic!("not ValueTuple::Three"),
+        }
+    }
+}
+impl<A, B, C, D> FromValueTuple for (A, B, C, D)
+where
+    A: Into<Value> + ValueType,
+    B: Into<Value> + ValueType,
+    C: Into<Value> + ValueType,
+    D: Into<Value> + ValueType,
+{
+    fn from_value_tuple<Z>(i: Z) -> Self
+    where
+        Z: IntoValueTuple,
+    {
+        match i.into_value_tuple() {
+            ValueTuple::Four(a, b, c, d) => (a.unwrap(), b.unwrap(), c.unwrap(), d.unwrap()),
+            _ => panic!("not ValueTuple::Four"),
+        }
+    }
+}
+impl<A, B, C, D, E> FromValueTuple for (A, B, C, D, E)
+where
+    A: Into<Value> + ValueType,
+    B: Into<Value> + ValueType,
+    C: Into<Value> + ValueType,
+    D: Into<Value> + ValueType,
+    E: Into<Value> + ValueType,
+{
+    fn from_value_tuple<Z>(i: Z) -> Self
+    where
+        Z: IntoValueTuple,
+    {
+        match i.into_value_tuple() {
+            ValueTuple::Five(a, b, c, d, e) => {
+                (a.unwrap(), b.unwrap(), c.unwrap(), d.unwrap(), e.unwrap())
+            }
+            _ => panic!("not ValueTuple::Five"),
+        }
+    }
+}
+impl<A, B, C, D, E, F> FromValueTuple for (A, B, C, D, E, F)
+where
+    A: Into<Value> + ValueType,
+    B: Into<Value> + ValueType,
+    C: Into<Value> + ValueType,
+    D: Into<Value> + ValueType,
+    E: Into<Value> + ValueType,
+    F: Into<Value> + ValueType,
+{
+    fn from_value_tuple<Z>(i: Z) -> Self
+    where
+        Z: IntoValueTuple,
+    {
+        match i.into_value_tuple() {
+            ValueTuple::Six(a, b, c, d, e, f) => (
+                a.unwrap(),
+                b.unwrap(),
+                c.unwrap(),
+                d.unwrap(),
+                e.unwrap(),
+                f.unwrap(),
+            ),
+            _ => panic!("not ValueTuple::Six"),
+        }
+    }
+}
+impl<A, B, C, D, E, F, G> FromValueTuple for (A, B, C, D, E, F, G)
+where
+    A: Into<Value> + ValueType,
+    B: Into<Value> + ValueType,
+    C: Into<Value> + ValueType,
+    D: Into<Value> + ValueType,
+    E: Into<Value> + ValueType,
+    F: Into<Value> + ValueType,
+    G: Into<Value> + ValueType,
+{
+    fn from_value_tuple<Z>(i: Z) -> Self
+    where
+        Z: IntoValueTuple,
+    {
+        match i.into_value_tuple() {
+            ValueTuple::Seven(a, b, c, d, e, f, g) => (
+                a.unwrap(),
+                b.unwrap(),
+                c.unwrap(),
+                d.unwrap(),
+                e.unwrap(),
+                f.unwrap(),
+                g.unwrap(),
+            ),
+            _ => panic!("not ValueTuple::Seven"),
+        }
+    }
+}
+impl<A, B, C, D, E, F, G, H> FromValueTuple for (A, B, C, D, E, F, G, H)
+where
+    A: Into<Value> + ValueType,
+    B: Into<Value> + ValueType,
+    C: Into<Value> + ValueType,
+    D: Into<Value> + ValueType,
+    E: Into<Value> + ValueType,
+    F: Into<Value> + ValueType,
+    G: Into<Value> + ValueType,
+    H: Into<Value> + ValueType,
+{
+    fn from_value_tuple<Z>(i: Z) -> Self
+    where
+        Z: IntoValueTuple,
+    {
+        match i.into_value_tuple() {
+            ValueTuple::Eight(a, b, c, d, e, f, g, h) => (
+                a.unwrap(),
+                b.unwrap(),
+                c.unwrap(),
+                d.unwrap(),
+                e.unwrap(),
+                f.unwrap(),
+                g.unwrap(),
+                h.unwrap(),
+            ),
+            _ => panic!("not ValueTuple::Eight"),
+        }
+    }
+}
+impl<A, B, C, D, E, F, G, H, I> FromValueTuple for (A, B, C, D, E, F, G, H, I)
+where
+    A: Into<Value> + ValueType,
+    B: Into<Value> + ValueType,
+    C: Into<Value> + ValueType,
+    D: Into<Value> + ValueType,
+    E: Into<Value> + ValueType,
+    F: Into<Value> + ValueType,
+    G: Into<Value> + ValueType,
+    H: Into<Value> + ValueType,
+    I: Into<Value> + ValueType,
+{
+    fn from_value_tuple<Z>(i: Z) -> Self
+    where
+        Z: IntoValueTuple,
+    {
+        match i.into_value_tuple() {
+            ValueTuple::Nine(a, b, c, d, e, f, g, h, i) => (
+                a.unwrap(),
+                b.unwrap(),
+                c.unwrap(),
+                d.unwrap(),
+                e.unwrap(),
+                f.unwrap(),
+                g.unwrap(),
+                h.unwrap(),
+                i.unwrap(),
+            ),
+            _ => panic!("not ValueTuple::Nine"),
+        }
+    }
+}
+impl<A, B, C, D, E, F, G, H, I, J> FromValueTuple for (A, B, C, D, E, F, G, H, I, J)
+where
+    A: Into<Value> + ValueType,
+    B: Into<Value> + ValueType,
+    C: Into<Value> + ValueType,
+    D: Into<Value> + ValueType,
+    E: Into<Value> + ValueType,
+    F: Into<Value> + ValueType,
+    G: Into<Value> + ValueType,
+    H: Into<Value> + ValueType,
+    I: Into<Value> + ValueType,
+    J: Into<Value> + ValueType,
+{
+    fn from_value_tuple<Z>(i: Z) -> Self
+    where
+        Z: IntoValueTuple,
+    {
+        match i.into_value_tuple() {
+            ValueTuple::Ten(a, b, c, d, e, f, g, h, i, j) => (
+                a.unwrap(),
+                b.unwrap(),
+                c.unwrap(),
+                d.unwrap(),
+                e.unwrap(),
+                f.unwrap(),
+                g.unwrap(),
+                h.unwrap(),
+                i.unwrap(),
+                j.unwrap(),
+            ),
+            _ => panic!("not ValueTuple::Ten"),
+        }
+    }
+}
+impl<A, B, C, D, E, F, G, H, I, J, K> FromValueTuple for (A, B, C, D, E, F, G, H, I, J, K)
+where
+    A: Into<Value> + ValueType,
+    B: Into<Value> + ValueType,
+    C: Into<Value> + ValueType,
+    D: Into<Value> + ValueType,
+    E: Into<Value> + ValueType,
+    F: Into<Value> + ValueType,
+    G: Into<Value> + ValueType,
+    H: Into<Value> + ValueType,
+    I: Into<Value> + ValueType,
+    J: Into<Value> + ValueType,
+    K: Into<Value> + ValueType,
+{
+    fn from_value_tuple<Z>(i: Z) -> Self
+    where
+        Z: IntoValueTuple,
+    {
+        match i.into_value_tuple() {
+            ValueTuple::Eleven(a, b, c, d, e, f, g, h, i, j, k) => (
+                a.unwrap(),
+                b.unwrap(),
+                c.unwrap(),
+                d.unwrap(),
+                e.unwrap(),
+                f.unwrap(),
+                g.unwrap(),
+                h.unwrap(),
+                i.unwrap(),
+                j.unwrap(),
+                k.unwrap(),
+            ),
+            _ => panic!("not ValueTuple::Eleven"),
+        }
+    }
+}
+impl<A, B, C, D, E, F, G, H, I, J, K, L> FromValueTuple for (A, B, C, D, E, F, G, H, I, J, K, L)
+where
+    A: Into<Value> + ValueType,
+    B: Into<Value> + ValueType,
+    C: Into<Value> + ValueType,
+    D: Into<Value> + ValueType,
+    E: Into<Value> + ValueType,
+    F: Into<Value> + ValueType,
+    G: Into<Value> + ValueType,
+    H: Into<Value> + ValueType,
+    I: Into<Value> + ValueType,
+    J: Into<Value> + ValueType,
+    K: Into<Value> + ValueType,
+    L: Into<Value> + ValueType,
+{
+    fn from_value_tuple<Z>(i: Z) -> Self
+    where
+        Z: IntoValueTuple,
+    {
+        match i.into_value_tuple() {
+            ValueTuple::Twelve(a, b, c, d, e, f, g, h, i, j, k, l) => (
+                a.unwrap(),
+                b.unwrap(),
+                c.unwrap(),
+                d.unwrap(),
+                e.unwrap(),
+                f.unwrap(),
+                g.unwrap(),
+                h.unwrap(),
+                i.unwrap(),
+                j.unwrap(),
+                k.unwrap(),
+                l.unwrap(),
+            ),
+            _ => panic!("not ValueTuple::Twelve"),
+        }
+    }
+}
+impl<A, B, C, D, E, F, G, H, I, J, K, L, M> FromValueTuple
+    for (A, B, C, D, E, F, G, H, I, J, K, L, M)
+where
+    A: Into<Value> + ValueType,
+    B: Into<Value> + ValueType,
+    C: Into<Value> + ValueType,
+    D: Into<Value> + ValueType,
+    E: Into<Value> + ValueType,
+    F: Into<Value> + ValueType,
+    G: Into<Value> + ValueType,
+    H: Into<Value> + ValueType,
+    I: Into<Value> + ValueType,
+    J: Into<Value> + ValueType,
+    K: Into<Value> + ValueType,
+    L: Into<Value> + ValueType,
+    M: Into<Value> + ValueType,
+{
+    fn from_value_tuple<Z>(i: Z) -> Self
+    where
+        Z: IntoValueTuple,
+    {
+        match i.into_value_tuple() {
+            ValueTuple::Thirteen(a, b, c, d, e, f, g, h, i, j, k, l, m) => (
+                a.unwrap(),
+                b.unwrap(),
+                c.unwrap(),
+                d.unwrap(),
+                e.unwrap(),
+                f.unwrap(),
+                g.unwrap(),
+                h.unwrap(),
+                i.unwrap(),
+                j.unwrap(),
+                k.unwrap(),
+                l.unwrap(),
+                m.unwrap(),
+            ),
+            _ => panic!("not ValueTuple::Thirteen"),
+        }
+    }
+}
+impl<A, B, C, D, E, F, G, H, I, J, K, L, M, N> FromValueTuple
+    for (A, B, C, D, E, F, G, H, I, J, K, L, M, N)
+where
+    A: Into<Value> + ValueType,
+    B: Into<Value> + ValueType,
+    C: Into<Value> + ValueType,
+    D: Into<Value> + ValueType,
+    E: Into<Value> + ValueType,
+    F: Into<Value> + ValueType,
+    G: Into<Value> + ValueType,
+    H: Into<Value> + ValueType,
+    I: Into<Value> + ValueType,
+    J: Into<Value> + ValueType,
+    K: Into<Value> + ValueType,
+    L: Into<Value> + ValueType,
+    M: Into<Value> + ValueType,
+    N: Into<Value> + ValueType,
+{
+    fn from_value_tuple<Z>(i: Z) -> Self
+    where
+        Z: IntoValueTuple,
+    {
+        match i.into_value_tuple() {
+            ValueTuple::Fourteen(a, b, c, d, e, f, g, h, i, j, k, l, m, n) => (
+                a.unwrap(),
+                b.unwrap(),
+                c.unwrap(),
+                d.unwrap(),
+                e.unwrap(),
+                f.unwrap(),
+                g.unwrap(),
+                h.unwrap(),
+                i.unwrap(),
+                j.unwrap(),
+                k.unwrap(),
+                l.unwrap(),
+                m.unwrap(),
+                n.unwrap(),
+            ),
+            _ => panic!("not ValueTuple::Fourteen"),
+        }
+    }
+}
+impl<A, B, C, D, E, F, G, H, I, J, K, L, M, N, O> FromValueTuple
+    for (A, B, C, D, E, F, G, H, I, J, K, L, M, N, O)
+where
+    A: Into<Value> + ValueType,
+    B: Into<Value> + ValueType,
+    C: Into<Value> + ValueType,
+    D: Into<Value> + ValueType,
+    E: Into<Value> + ValueType,
+    F: Into<Value> + ValueType,
+    G: Into<Value> + ValueType,
+    H: Into<Value> + ValueType,
+    I: Into<Value> + ValueType,
+    J: Into<Value> + ValueType,
+    K: Into<Value> + ValueType,
+    L: Into<Value> + ValueType,
+    M: Into<Value> + ValueType,
+    N: Into<Value> + ValueType,
+    O: Into<Value> + ValueType,
+{
+    fn from_value_tuple<Z>(i: Z) -> Self
+    where
+        Z: IntoValueTuple,
+    {
+        match i.into_value_tuple() {
+            ValueTuple::Fifteen(a, b, c, d, e, f, g, h, i, j, k, l, m, n, o) => (
+                a.unwrap(),
+                b.unwrap(),
+                c.unwrap(),
+                d.unwrap(),
+                e.unwrap(),
+                f.unwrap(),
+                g.unwrap(),
+                h.unwrap(),
+                i.unwrap(),
+                j.unwrap(),
+                k.unwrap(),
+                l.unwrap(),
+                m.unwrap(),
+                n.unwrap(),
+                o.unwrap(),
+            ),
+            _ => panic!("not ValueTuple::Fifteen"),
+        }
+    }
+}
+impl<A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P> FromValueTuple
+    for (A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P)
+where
+    A: Into<Value> + ValueType,
+    B: Into<Value> + ValueType,
+    C: Into<Value> + ValueType,
+    D: Into<Value> + ValueType,
+    E: Into<Value> + ValueType,
+    F: Into<Value> + ValueType,
+    G: Into<Value> + ValueType,
+    H: Into<Value> + ValueType,
+    I: Into<Value> + ValueType,
+    J: Into<Value> + ValueType,
+    K: Into<Value> + ValueType,
+    L: Into<Value> + ValueType,
+    M: Into<Value> + ValueType,
+    N: Into<Value> + ValueType,
+    O: Into<Value> + ValueType,
+    P: Into<Value> + ValueType,
+{
+    fn from_value_tuple<Z>(i: Z) -> Self
+    where
+        Z: IntoValueTuple,
+    {
+        match i.into_value_tuple() {
+            ValueTuple::Sixteen(a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p) => (
+                a.unwrap(),
+                b.unwrap(),
+                c.unwrap(),
+                d.unwrap(),
+                e.unwrap(),
+                f.unwrap(),
+                g.unwrap(),
+                h.unwrap(),
+                i.unwrap(),
+                j.unwrap(),
+                k.unwrap(),
+                l.unwrap(),
+                m.unwrap(),
+                n.unwrap(),
+                o.unwrap(),
+                p.unwrap(),
+            ),
+            _ => panic!("not ValueTuple::Sixteen"),
+        }
+    }
+}
+impl<A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q> FromValueTuple
+    for (A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q)
+where
+    A: Into<Value> + ValueType,
+    B: Into<Value> + ValueType,
+    C: Into<Value> + ValueType,
+    D: Into<Value> + ValueType,
+    E: Into<Value> + ValueType,
+    F: Into<Value> + ValueType,
+    G: Into<Value> + ValueType,
+    H: Into<Value> + ValueType,
+    I: Into<Value> + ValueType,
+    J: Into<Value> + ValueType,
+    K: Into<Value> + ValueType,
+    L: Into<Value> + ValueType,
+    M: Into<Value> + ValueType,
+    N: Into<Value> + ValueType,
+    O: Into<Value> + ValueType,
+    P: Into<Value> + ValueType,
+    Q: Into<Value> + ValueType,
+{
+    fn from_value_tuple<Z>(i: Z) -> Self
+    where
+        Z: IntoValueTuple,
+    {
+        match i.into_value_tuple() {
+            ValueTuple::Seventeen(a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q) => (
+                a.unwrap(),
+                b.unwrap(),
+                c.unwrap(),
+                d.unwrap(),
+                e.unwrap(),
+                f.unwrap(),
+                g.unwrap(),
+                h.unwrap(),
+                i.unwrap(),
+                j.unwrap(),
+                k.unwrap(),
+                l.unwrap(),
+                m.unwrap(),
+                n.unwrap(),
+                o.unwrap(),
+                p.unwrap(),
+                q.unwrap(),
+            ),
+            _ => panic!("not ValueTuple::Seventeen"),
+        }
+    }
+}
+impl<A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R> FromValueTuple
+    for (A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R)
+where
+    A: Into<Value> + ValueType,
+    B: Into<Value> + ValueType,
+    C: Into<Value> + ValueType,
+    D: Into<Value> + ValueType,
+    E: Into<Value> + ValueType,
+    F: Into<Value> + ValueType,
+    G: Into<Value> + ValueType,
+    H: Into<Value> + ValueType,
+    I: Into<Value> + ValueType,
+    J: Into<Value> + ValueType,
+    K: Into<Value> + ValueType,
+    L: Into<Value> + ValueType,
+    M: Into<Value> + ValueType,
+    N: Into<Value> + ValueType,
+    O: Into<Value> + ValueType,
+    P: Into<Value> + ValueType,
+    Q: Into<Value> + ValueType,
+    R: Into<Value> + ValueType,
+{
+    fn from_value_tuple<Z>(i: Z) -> Self
+    where
+        Z: IntoValueTuple,
+    {
+        match i.into_value_tuple() {
+            ValueTuple::Eighteen(a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r) => (
+                a.unwrap(),
+                b.unwrap(),
+                c.unwrap(),
+                d.unwrap(),
+                e.unwrap(),
+                f.unwrap(),
+                g.unwrap(),
+                h.unwrap(),
+                i.unwrap(),
+                j.unwrap(),
+                k.unwrap(),
+                l.unwrap(),
+                m.unwrap(),
+                n.unwrap(),
+                o.unwrap(),
+                p.unwrap(),
+                q.unwrap(),
+                r.unwrap(),
+            ),
+            _ => panic!("not ValueTuple::Eighteen"),
+        }
+    }
+}
+impl<A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S> FromValueTuple
+    for (A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S)
+where
+    A: Into<Value> + ValueType,
+    B: Into<Value> + ValueType,
+    C: Into<Value> + ValueType,
+    D: Into<Value> + ValueType,
+    E: Into<Value> + ValueType,
+    F: Into<Value> + ValueType,
+    G: Into<Value> + ValueType,
+    H: Into<Value> + ValueType,
+    I: Into<Value> + ValueType,
+    J: Into<Value> + ValueType,
+    K: Into<Value> + ValueType,
+    L: Into<Value> + ValueType,
+    M: Into<Value> + ValueType,
+    N: Into<Value> + ValueType,
+    O: Into<Value> + ValueType,
+    P: Into<Value> + ValueType,
+    Q: Into<Value> + ValueType,
+    R: Into<Value> + ValueType,
+    S: Into<Value> + ValueType,
+{
+    fn from_value_tuple<Z>(i: Z) -> Self
+    where
+        Z: IntoValueTuple,
+    {
+        match i.into_value_tuple() {
+            ValueTuple::Nineteen(a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s) => (
+                a.unwrap(),
+                b.unwrap(),
+                c.unwrap(),
+                d.unwrap(),
+                e.unwrap(),
+                f.unwrap(),
+                g.unwrap(),
+                h.unwrap(),
+                i.unwrap(),
+                j.unwrap(),
+                k.unwrap(),
+                l.unwrap(),
+                m.unwrap(),
+                n.unwrap(),
+                o.unwrap(),
+                p.unwrap(),
+                q.unwrap(),
+                r.unwrap(),
+                s.unwrap(),
+            ),
+            _ => panic!("not ValueTuple::Nineteen"),
+        }
+    }
+}
+impl<A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T> FromValueTuple
+    for (A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T)
+where
+    A: Into<Value> + ValueType,
+    B: Into<Value> + ValueType,
+    C: Into<Value> + ValueType,
+    D: Into<Value> + ValueType,
+    E: Into<Value> + ValueType,
+    F: Into<Value> + ValueType,
+    G: Into<Value> + ValueType,
+    H: Into<Value> + ValueType,
+    I: Into<Value> + ValueType,
+    J: Into<Value> + ValueType,
+    K: Into<Value> + ValueType,
+    L: Into<Value> + ValueType,
+    M: Into<Value> + ValueType,
+    N: Into<Value> + ValueType,
+    O: Into<Value> + ValueType,
+    P: Into<Value> + ValueType,
+    Q: Into<Value> + ValueType,
+    R: Into<Value> + ValueType,
+    S: Into<Value> + ValueType,
+    T: Into<Value> + ValueType,
+{
+    fn from_value_tuple<Z>(i: Z) -> Self
+    where
+        Z: IntoValueTuple,
+    {
+        match i.into_value_tuple() {
+            ValueTuple::Twenty(a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t) => (
+                a.unwrap(),
+                b.unwrap(),
+                c.unwrap(),
+                d.unwrap(),
+                e.unwrap(),
+                f.unwrap(),
+                g.unwrap(),
+                h.unwrap(),
+                i.unwrap(),
+                j.unwrap(),
+                k.unwrap(),
+                l.unwrap(),
+                m.unwrap(),
+                n.unwrap(),
+                o.unwrap(),
+                p.unwrap(),
+                q.unwrap(),
+                r.unwrap(),
+                s.unwrap(),
+                t.unwrap(),
+            ),
+            _ => panic!("not ValueTuple::Twenty"),
         }
     }
 }
